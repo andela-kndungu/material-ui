@@ -32,14 +32,14 @@ const config = {
     new webpack.NoErrorsPlugin(),
     // Moves files
     new TransferWebpackPlugin([
-      {from: 'www'},
+      { from: 'www' },
     ], path.resolve(__dirname, 'src')),
   ],
   module: {
     loaders: [
       {
         // React-hot loader and
-        test: /\.js$/, // All .js files
+        test: /\.jsx?$/, // All .js files
         loaders: ['react-hot', 'babel-loader'], // react-hot is like browser sync and babel loads jsx and es6-7
         exclude: [nodeModulesPath],
       },
